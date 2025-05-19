@@ -30,7 +30,7 @@ const DynamicDashboard = () => {
             }
             <h3>Task List:</h3>
             <ul>
-                {tasks.map(task => <li>{task.taskName} {task.completed ? "✅" : "❌"}</li>)}
+                {tasks.map((task, index) => <li key={index}>{task.taskName} {task.completed ? "✅" : "❌"}</li>)}
             </ul>
             <p>Completed tasks: {completedTasks}</p>
             <p>Incomplete tasks: {incompleteTasks}</p>
